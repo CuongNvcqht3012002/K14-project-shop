@@ -8,6 +8,10 @@
     color: #4267b2;
 }
 
+.empty__cart {
+    width: 150%;
+}
+
 a.cart-num {
     display: none;
 }
@@ -222,6 +226,9 @@ html {
         display: flex;
         flex-direction: column;
     }
+    .empty__cart {
+        width: 100%;
+    }
     .cart__list {
         width: 100%;
     }
@@ -252,6 +259,12 @@ html {
     .cart {
         display: flex;
         flex-direction: column;
+    }
+    .empty__cart {
+        width: 100%;
+    }
+    .empty__cart h2 {
+        text-align: center;
     }
     .cart__list {
         width: 100%;

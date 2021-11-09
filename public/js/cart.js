@@ -28,7 +28,7 @@ function renderCartEmpty() {
 			</a>
 		</div>
 	`)
-	$('.empty__cart').attr('style', 'width:150%')
+	// $('.empty__cart').attr('style', 'width:150%')
 }
 
 function renderCart(products) {
