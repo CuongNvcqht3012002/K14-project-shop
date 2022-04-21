@@ -44,17 +44,14 @@ section .noi-dung .form h2 {
 	color: #607d8b;
 	font-weight: 500;
 	font-size: 1.5em;
-	/* text-transform: uppercase; */
 	text-align: center;
 	margin-bottom: 40px;
-	border-bottom: 4px solid #ff4584;
-	/* display: inline-block; */
+	border-bottom: 4px solid var(--primary-color);
 	letter-spacing: 5px;
 }
 
 section .noi-dung .form .input-form {
 	margin-bottom: 20px;
-	/* display: flex; */
 	text-align: center;
 }
 
@@ -78,7 +75,7 @@ section .noi-dung .form .input-form input {
 	border-radius: 30px;
 }
 section .noi-dung .form .input-form input[type='submit'] {
-	background: #ff4584;
+	background: var(--primary-color);
 	color: #fff;
 	outline: none;
 	border: none;
@@ -90,7 +87,7 @@ section .noi-dung .form .input-form input[type='submit'] {
 }
 
 section .noi-dung .form .input-form input[type='submit']:hover {
-	background: #f53677;
+	opacity: 0.8;
 }
 section .noi-dung .form .nho-dang-nhap {
 	margin-bottom: 10px;
@@ -99,17 +96,27 @@ section .noi-dung .form .nho-dang-nhap {
 }
 
 section .noi-dung .form .input-form p {
-	color: #607d8b;
+	color: var(--primary-color);
+	font-weight: 600;
 }
 
 section .noi-dung .form .input-form p a {
-	color: #ff4584;
+	font-weight: 600;
+	color: var(--primary-color);
 }
 
+section .noi-dung .form .input-form a {
+	font-weight: 600;
+	color: var(--primary-color);
+}
 
+.text-bold {
+	font-weight: 600;
+	color: var(--primary-color);
+}
 
- /* The Modal (background) */
- .modal {
+/* The Modal (background) */
+.modal {
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
 	z-index: 1; /* Sit on top */
@@ -118,33 +125,33 @@ section .noi-dung .form .input-form p a {
 	width: 100%; /* Full width */
 	height: 100%; /* Full height */
 	overflow: auto; /* Enable scroll if needed */
-	background-color: rgb(0,0,0); /* Fallback color */
-	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
 	background-color: #fefefe;
 	margin: 15% auto; /* 15% from the top and centered */
 	padding: 20px;
 	border: 1px solid #888;
 	width: 50%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .close {
+}
+
+/* The Close Button */
+.close {
 	color: #aaa;
 	float: right;
 	font-size: 28px;
 	font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
 	color: black;
 	text-decoration: none;
 	cursor: pointer;
-  } 
+}
 
 @media (max-width: 768px) {
 	section .img-bg {
@@ -177,18 +184,16 @@ section .noi-dung .form .input-form p a {
 }
 
 form {
-    text-align: center;
+	text-align: center;
 }
 a {
 	text-decoration: none;
-    margin: 0 10px;
+	margin: 0 10px;
 	white-space: nowrap;
 }
 
-
-
 /* madal */
-.modal p span input{
+.modal p span input {
 	display: flex;
 	justify-content: center;
 	text-align: justify;
@@ -208,7 +213,7 @@ p {
 }
 
 .modal .modal-content .input-form input [type='submit'] {
-	background: #ff4584;
+	background: var(--primary-color);
 	color: #fff;
 	outline: none;
 	border: none;

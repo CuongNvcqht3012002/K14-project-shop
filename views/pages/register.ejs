@@ -1,58 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Yolo - Đăng ký</title>
+		<link rel="stylesheet" href="/public/css/reset.css" />
+		<link rel="stylesheet" href="/public/css/login.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/public/css/login.css">
-
-</head>
-
-<body>
-    <section>
-        <!--Bắt Đầu Phần Hình Ảnh-->
-        <div class="img-bg">
-            <img src="/public/images/authImg/register.jpg" alt="" loading="lazy" >
-        </div>
-        <!--Kết Thúc Phần Hình Ảnh-->
-        <!--Bắt Đầu Phần Nội Dung-->
-        <div class="noi-dung">
-            <div class="form">
-                <h2>Register</h2>
-                <form id="form-register">
-                    <div class="input-form">
-                        <span>Tên Đăng Nhập</span>
-                        <input type="text" required name="name" id="user" placeholder="UserName" minlength="6">  
-                    </div>
-                    <div class="input-form">
-                        <span>Số Điện Thoại</span>
-                        <input type="tel" required id="phoneNumber" name="phoneNumber" placeholder="Phone" pattern="0[0-9]{9}" title="Hãy điền đúng 10 chữ số điện thoại">
-                    </div>
-                    <div class="input-form">
-                        <span>Email</span>
-                        <input type="email" required id="email" name="email" placeholder="Email">
-                    </div>
-                    <div class="input-form">
-                        <span>Mật Khẩu</span>
-                        <input type="password" id="password" required name="password" placeholder="Password" minlength="6">
-                    </div>
-                    <div class="input-form">
-                        <span>Nhập Lại Mật Khẩu</span>
-                        <input type="password" required placeholder="Confirm" id="confirm" minlength="6">
-                    </div>
-                    <div class="input-form">
-                        <input type="submit" value="Register">
-                    </div>
-                    <a href="/auth/login">Đăng nhập</a>
-                    <a href="/">Trang chủ</a>
-                </form>
-            </div>
-        </div>
-        <!--Kết Thúc Phần Nội Dung-->
-    </section>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="/public/js/register.js"></script>
-
+	<body>
+		<section>
+			<!--Bắt Đầu Phần Hình Ảnh-->
+			<div class="img-bg">
+				<img src="/public/images/authImg/register.jpg" alt="" loading="lazy" />
+			</div>
+			<!--Kết Thúc Phần Hình Ảnh-->
+			<!--Bắt Đầu Phần Nội Dung-->
+			<div class="noi-dung">
+				<div class="form">
+					<h2>ĐĂNG KÝ</h2>
+					<form id="form-register">
+						<div class="input-form">
+							<span>Tên Đăng Nhập</span>
+							<input
+								type="text"
+								required
+								name="name"
+								id="user"
+								placeholder="UserName"
+								minlength="6"
+							/>
+						</div>
+						<div class="input-form">
+							<span>Số Điện Thoại</span>
+							<input
+								type="tel"
+								required
+								id="phoneNumber"
+								name="phoneNumber"
+								placeholder="Phone"
+								pattern="0[0-9]{9}"
+								title="Hãy điền đúng 10 chữ số điện thoại"
+							/>
+						</div>
+						<div class="input-form">
+							<span>Email</span>
+							<input
+								type="email"
+								required
+								id="email"
+								name="email"
+								placeholder="Email"
+							/>
+						</div>
+						<div class="input-form">
+							<span>Mật Khẩu</span>
+							<input
+								type="password"
+								id="password"
+								required
+								name="password"
+								placeholder="Password"
+								minlength="6"
+							/>
+						</div>
+						<div class="input-form">
+							<span>Nhập Lại Mật Khẩu</span>
+							<input
+								type="password"
+								required
+								placeholder="Confirm"
+								id="confirm"
+								minlength="6"
+							/>
+						</div>
+						<div class="input-form">
+							<input type="submit" value="Register" />
+						</div>
+						<a class="text-bold" href="/auth/login">Đăng nhập</a>
+						<a class="text-bold" href="/">Trang chủ</a>
+					</form>
+				</div>
+			</div>
+			<!--Kết Thúc Phần Nội Dung-->
+		</section>
+	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="/public/js/register.js"></script>
 </html>

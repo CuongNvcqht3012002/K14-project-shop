@@ -36,7 +36,11 @@
                     </td>
                     <td><%= order.createdAt.toLocaleDateString("en-GB") %></td>
                     <td><%= order.totalCost.toLocaleString() %></td>
-                    <td class="order-status"><%= order.status %></td>
+                    <td class="order-status"><%= statusObj = {
+                        'cancelled': 'Đã hủy',
+                        'waiting': 'Đang chờ',
+                        'done': 'Đã giao'
+                    }[order.status] %></td>
                     <td>
                         <a href="/invoices/<%= order._id %>" target="_blank">Hóa Đơn</a>
                         <% if(order.status === 'cancelled' || order.status === 'done'){ %>

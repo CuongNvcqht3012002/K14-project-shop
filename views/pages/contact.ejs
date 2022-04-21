@@ -1,92 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Yolo - Liên hệ</title>
+		<link rel="stylesheet" href="../../public/css/header.css" />
+		<link rel="stylesheet" href="../../public/css/footer.css" />
+		<link rel="stylesheet" href="../../public/css/homeBase.css" />
+		<link rel="stylesheet" href="../../public/css/member_card.css" />
+		<!-- <link rel="stylesheet" href="../../public/css/product.css" /> -->
+		<!-- <link rel="stylesheet" href="../../public/css/product-card.css" /> -->
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Yolo - Liên hệ</title>
-	<link rel="stylesheet" href="../../public/css/header.css" />
-	<link rel="stylesheet" href="../../public/css/footer.css" />
-	<link rel="stylesheet" href="../../public/css/homeBase.css" />
-	<link rel="stylesheet" href="../../public/css/member_card.css" />
-	<!-- <link rel="stylesheet" href="../../public/css/product.css" /> -->
-	<!-- <link rel="stylesheet" href="../../public/css/product-card.css" /> -->
+		<link
+			href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/public/css/contact.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+			integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+	</head>
 
-    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />  
-    <link rel="stylesheet" href="/public/css/contact.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body>
-	<%- include ('../components/header'); -%>
+	<body>
+		<%- include ('../components/header'); -%>
 		<div class="container">
 			<div class="main flex">
-                <!-- Write content here -->
-                <!-- <div class="form-input">
-                    <h3>Gửi liên hệ cho chúng tôi</h3>
-                    <div class="flex">
-                        <input type="text" placeholder="Họ tên(*)" class="mr">
-                        <input type="tel" placeholder="Điện thoại">
-                    </div>
-                    <div class="flex">
-                        <input type="email" placeholder="Email(*)" class="mr">
-                        <input type="text" placeholder="Địa chỉ">
-                    </div>
-                    <div class="flex">
-                        <textarea placeholder="Nhập nội dung"></textarea>
-                    </div>
-                    <button>GỬI ĐI</button>
-                </div> -->
-                <div class="team-members">
-                    <div class="grid-rows">
-                        <% membersData.forEach(member => { %>
-                            <div class="grid-col-3">
-                                <%- include('../components/member_card', {
-                                    name: member.name,
-                                    avatar: member.avatar,
-                                    facebook: member.facebook,
-                                    twitter: member.twitter,
-                                    linkedin: member.linkedin
-                                }) -%>
-                            </div>
-                        <% }) %> 
-                    </div>
-                </div>
-                <div class="form-info">
-                    <h3>Thông tin liên hệ</h3>
-                    <div class="flex">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>BT3 A4, ngõ 214 Nguyễn Xiển, Thanh xuân, Hà Nội, Việt Nam</p>
-                    </div>
-                    <div class="flex">
-                        <i class="fas fa-phone"></i>
-                        <p>0123456789</p>
-                    </div>
-                    <div class="flex">
-                        <i class="fas fa-id-card"></i>
-                        <p>0123456789</p>
-                    </div>
-                    <div class="flex">
-                        <i class="fas fa-envelope"></i>
-                        <p>k14nodemy@gmail.com</p>
-                    </div>
-                    <div class="flex">
-                        <i class="fas fa-globe"></i>
-                        <a href="http://localhost:3000">http://localhost:3000</a>
-                    </div>
-                </div>
+				<div class="team-members">
+                    <h3>My Team</h3>
+					<div class="grid-rows">
+						<% membersData.forEach(member => { %>
+						<div class="grid-col-4">
+							<%- include('../components/member_card', { name: member.name,
+							avatar: member.avatar, facebook: member.facebook, twitter:
+							member.twitter, linkedin: member.linkedin }) -%>
+						</div>
+						<% }) %>
+					</div>
+				</div>
+				<div class="form-info">
+					<h3>Thông tin liên hệ</h3>
+					<div class="flex">
+						<i class="fas fa-map-marker-alt"></i>
+						<p>BT3 A4, ngõ 214 Nguyễn Xiển, Thanh xuân, Hà Nội, Việt Nam</p>
+					</div>
+					<div class="flex">
+						<i class="fas fa-phone"></i>
+						<p>0123456789</p>
+					</div>
+					<div class="flex">
+						<i class="fas fa-id-card"></i>
+						<p>0123456789</p>
+					</div>
+					<div class="flex">
+						<i class="fas fa-envelope"></i>
+						<p>k14nodemy@gmail.com</p>
+					</div>
+					<div class="flex">
+						<i class="fas fa-globe"></i>
+						<a href="http://localhost:3000">http://localhost:3000</a>
+					</div>
+				</div>
 			</div>
 		</div>
 
-        <!-- MAP -->
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.1533096594408!2d105.80185781476253!3d20.986490786021307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acc026d557f9%3A0x6861dfd5c12f96cb!2zTmcuIDIxNCBOZ3V54buFbiBYaeG7g24sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1635409379032!5m2!1svi!2s" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-        
-	<%- include ('../components/footer'); -%>
+		<!-- MAP -->
+		<div class="map">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.1533096594408!2d105.80185781476253!3d20.986490786021307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acc026d557f9%3A0x6861dfd5c12f96cb!2zTmcuIDIxNCBOZ3V54buFbiBYaeG7g24sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1635409379032!5m2!1svi!2s"
+				style="border: 0"
+				allowfullscreen=""
+				loading="lazy"
+			></iframe>
+		</div>
+
+		<%- include ('../components/footer'); -%>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="../../public/js/header.js"></script>
-</body>
-
+	</body>
 </html>

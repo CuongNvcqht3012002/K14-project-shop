@@ -92,7 +92,7 @@ module.exports.editPasswordAccount = async (req, res) => {
 			} else {
 				res.json({
 					status: 'fail',
-					message: 'Mat khẩu cũ không đúng',
+					message: 'Mật khẩu cũ không đúng',
 				})
 			}
 		})

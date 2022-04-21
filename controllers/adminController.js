@@ -167,7 +167,7 @@ module.exports.getNews = async (req, res) => {
 					pages: Math.ceil(totalNews / perPage),
 					totalNews: totalNews,
 				})
-			}).lean()
+			})
 	// } catch (error) {
 	// 	res.status(500).json({
 	// 		status: 'fail',
