@@ -44,9 +44,8 @@ function renderCart(products) {
 						</a>	
 					</td>
 					<td class='td1 cart__item__info__name'>
-						<a href='/products/detail/${product.idProductCode._id}'>${
-						product.idProductCode.name
-					} - ${product.color} - ${product.size}</a>
+						<a href='/products/detail/${product.idProductCode._id}'>${product.idProductCode.name
+			} - ${product.color} - ${product.size}</a>
 					</td>
 					<td class='td1 product_quantity'>
 						<div class='product__info__item__quantity'>
@@ -206,7 +205,7 @@ async function getCart() {
 
 getCart()
 
-function changeCart() {}
+function changeCart() { }
 
 function formatTotalProduct(quantity) {
 	if (quantity < 10)

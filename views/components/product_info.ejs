@@ -1,81 +1,82 @@
 <div class="product-info">
-    <h1 class="product-info__title">
-        <%= product.name %>
-    </h1>
-    <div class="product-info__item">
-        <span class="product-info-item__price">
-            <%= product.cost.toLocaleString() %>
-        </span>
-    </div>
-    <div class="product-info__item">
-        <div class="product-info-item__title">Màu sắc<button class="circle show-all-variants">All</button></div>
-        <div class="product-info-item__list">
-            <% colors.forEach(color=> { %>
-                <label class="product-info-item-list__item">
-                    <input type="radio" name="color" value="<%= color %>">
-                    <div class="circle" color="<%= color %>"></div>
-                </label>
-                <% }) %>
-        </div>
-    </div>
-    <div class="product-info__item">
-        <div class="product-info-item__title">Kích cỡ<button class="circle show-all-variants">All</button></div>
-        <div class="product-info-item__list">
-            <% sizes.forEach(size=> { %>
-                <label class="product-info-item-list__item">
-                    <input type="radio" name="size" value="<%= size %>">
-                    <span class="product-info-item-list-item__size">
-                        <%= size %>
-                    </span>
-                </label>
-                <% }) %>
-        </div>
-    </div>
-    <div class="product-info__item">
-        <div class="product-info-item__title">Số lượng</div>
-        <div class="product-info-item__quantity">
-            <div class="product-info-item-quantity__btn" onclick="plusQuantity(-1)">
-                <i class="bx bx-minus"></i>
-            </div>
-            <div class="product-info-item-quantity__input">
-                <input type="number" id="quantity" min="1" max="1">
-            </div>
-            <div class="product-info-item-quantity__btn" onclick="plusQuantity(1)">
-                <i class="bx bx-plus"></i>
-            </div>
-            <div class="product-info-item__variant">Còn <%= total %> sản phẩm</div>
-        </div>
-        <!-- <div class="product-info-item__variant">Còn <%= total %> sản phẩm</div> -->
-    </div>
-    <div class="product-info__item">
-        <button class="btn btn-primary btn-large">
-            <span class="btn-txt" onclick="addCart('<%= logging %>')">Thêm vào giỏ</span>
-        </button>
-        <input type="checkbox" name="" id="has_bought">
-        <button class="btn btn-primary btn-large">
-            <span class="btn-txt" onclick="buyNow('<%= logging %>')">Mua ngay</span>
-        </button>
-    </div>
+	<h1 class="product-info__title"><%= product.name %></h1>
+	<div class="product-info__item">
+		<span class="product-info-item__price">
+			<%= product.cost.toLocaleString() %>
+		</span>
+	</div>
+	<div class="product-info__item">
+		<div class="product-info-item__title">
+			Màu sắc<button class="circle show-all-variants">Clear</button>
+		</div>
+		<div class="product-info-item__list">
+			<% colors.forEach(color=> { %>
+			<label class="product-info-item-list__item">
+				<input type="radio" name="color" value="<%= color %>" />
+				<div class="circle" color="<%= color %>"></div>
+			</label>
+			<% }) %>
+		</div>
+	</div>
+	<div class="product-info__item">
+		<div class="product-info-item__title">
+			Kích cỡ
+			<!-- <button class="circle show-all-variants">Clear</button> -->
+		</div>
+		<div class="product-info-item__list">
+			<% sizes.forEach(size=> { %>
+			<label class="product-info-item-list__item">
+				<input type="radio" name="size" value="<%= size %>" />
+				<span class="product-info-item-list-item__size"> <%= size %> </span>
+			</label>
+			<% }) %>
+		</div>
+	</div>
+	<div class="product-info__item">
+		<div class="product-info-item__title">Số lượng</div>
+		<div class="product-info-item__quantity">
+			<div class="product-info-item-quantity__btn" onclick="plusQuantity(-1)">
+				<i class="bx bx-minus"></i>
+			</div>
+			<div class="product-info-item-quantity__input">
+				<input type="number" id="quantity" min="1" max="1" />
+			</div>
+			<div class="product-info-item-quantity__btn" onclick="plusQuantity(1)">
+				<i class="bx bx-plus"></i>
+			</div>
+			<div class="product-info-item__variant">Còn <%= total %> sản phẩm</div>
+		</div>
+		<!-- <div class="product-info-item__variant">Còn <%= total %> sản phẩm</div> -->
+	</div>
+	<div class="product-info__item">
+		<button class="btn btn-primary btn-large">
+			<span class="btn-txt" onclick="addCart('<%= logging %>')"
+				>Thêm vào giỏ</span
+			>
+		</button>
+		<!-- <input type="checkbox" name="" id="has_bought" /> -->
+		<!-- <button class="btn btn-primary btn-large">
+			<span class="btn-txt" onclick="buyNow('<%= logging %>')">Mua ngay</span>
+		</button> -->
+	</div>
 </div>
 <div class="product-description mobile">
-    <div class="product-description__title">
-        Chi tiết sản phẩm
-    </div>
-    <div class="product-description__content">
-
-    </div>
-    <div class="product-description__toggle">
-        <button class="btn btn-primary btn-small">
-            <span class="btn-txt">Xem thêm</span>
-        </button>
-        <button class="btn btn-primary btn-small">
-            <span class="btn-txt">Thu gọn</span>
-        </button>
-    </div>
+	<div class="product-description__title">Chi tiết sản phẩm</div>
+	<div class="product-description__content"></div>
+	<div class="product-description__toggle">
+		<button class="btn btn-primary btn-small">
+			<span class="btn-txt">Xem thêm</span>
+		</button>
+		<button class="btn btn-primary btn-small">
+			<span class="btn-txt">Thu gọn</span>
+		</button>
+	</div>
 </div>
 
 <script>
-    let description = JSON.parse('<%- JSON.stringify(product.description) %>')
-    document.querySelector('.product-description__content').innerHTML = description
-    document.querySelector('.mobile .product-description__content').innerHTML = description
+	let description = JSON.parse('<%- JSON.stringify(product.description) %>')
+	document.querySelector('.product-description__content').innerHTML =
+		description
+	document.querySelector('.mobile .product-description__content').innerHTML =
+		description
 </script>
