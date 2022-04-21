@@ -236,6 +236,12 @@
         transform: translateX(0);
     }
 
+    .pagination a {
+        width: 30px;
+        height: 30px;
+        margin: 0;
+    }
+
 }
 
 @media only screen and (max-width:37.5em) {
@@ -255,5 +261,13 @@
 
     .filter-overlay.active {
         top: 40px;
+    }
+
+    .pagination ul {
+        font-size: 0.7rem;
+    }
+
+    .pagination ul li:not(:last-child) {
+        margin-right: 3px;
     }
 }

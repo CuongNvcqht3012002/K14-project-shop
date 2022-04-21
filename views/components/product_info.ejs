@@ -8,7 +8,7 @@
         </span>
     </div>
     <div class="product-info__item">
-        <div class="product-info-item__title">Màu sắc</div>
+        <div class="product-info-item__title">Màu sắc<button class="circle show-all-variants">All</button></div>
         <div class="product-info-item__list">
             <% colors.forEach(color=> { %>
                 <label class="product-info-item-list__item">
@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="product-info__item">
-        <div class="product-info-item__title">Kích cỡ</div>
+        <div class="product-info-item__title">Kích cỡ<button class="circle show-all-variants">All</button></div>
         <div class="product-info-item__list">
             <% sizes.forEach(size=> { %>
                 <label class="product-info-item-list__item">
@@ -51,6 +51,7 @@
         <button class="btn btn-primary btn-large">
             <span class="btn-txt" onclick="addCart('<%= logging %>')">Thêm vào giỏ</span>
         </button>
+        <input type="checkbox" name="" id="has_bought">
         <button class="btn btn-primary btn-large">
             <span class="btn-txt" onclick="buyNow('<%= logging %>')">Mua ngay</span>
         </button>

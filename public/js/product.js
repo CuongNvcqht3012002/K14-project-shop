@@ -85,13 +85,7 @@ function render(page) {
 	if(pages > 0){
 		$('.pagination').append('<ul class="list-number__pages"></ul>');
 		//first item
-		if(current == 1){
-			$('.list-number__pages').append(`
-				<li class="disabled">
-					<a>First</a>
-		  		</li>
-			`)
-		}else{
+		if(current != 1){
 			$('.list-number__pages').append(`
 				<li>
 					<a onclick="getProducts(${1})">First</a>
@@ -100,7 +94,7 @@ function render(page) {
 		}
 
 		//item
-		var i = (Number(current) > 3 ? Number(current) - 2 : 1);
+		var i = (Number(current) > 2 ? Number(current) - 1 : 1);
 		if(i !== 1) {
 			$('.list-number__pages').append(`
 				<li class="disabled">
@@ -108,7 +102,7 @@ function render(page) {
 				</li>
 			`)
         }
-		for(; i <= (Number(current) + 2) && i <= pages; i++) {
+		for(; i <= (Number(current) + 1) && i <= pages; i++) {
 			if(i == current) {
 				$('.list-number__pages').append(`
 					<li class="active">
@@ -126,7 +120,7 @@ function render(page) {
 					</li>
 				`)
 			}
-			if (i == Number(current) + 2 && i < pages) { 
+			if (i == Number(current) + 1 && i < pages) { 
 				$('.list-number__pages').append(`
 					<li class="disabled">
 						<a>...</a>
@@ -136,13 +130,7 @@ function render(page) {
 		}
 
 		//last item
-		if(current == pages){
-			$('.list-number__pages').append(`
-				<li class="disabled">
-					<a>Last</a>
-		  		</li>
-			`)
-		}else{
+		if(current != pages){
 			$('.list-number__pages').append(`
 				<li>
 					<a onclick="getProducts(${pages})">Last</a>

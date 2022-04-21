@@ -223,7 +223,7 @@ module.exports.renderProduct = async (req, res) => {
 				if (products[i].idProductCode == code._id) return true
 		})
 		// pagination
-		let perPage = 9 // số lượng sản phẩm xuất hiện trên 1 page
+		let perPage = 3 // số lượng sản phẩm xuất hiện trên 1 page
 		let totalPages = Math.ceil(productCodes.length / perPage)
 		let begin = (page - 1) * perPage
 		let end = page * perPage

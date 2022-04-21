@@ -18,6 +18,8 @@
 
 .product-images__list{
     width: 20%;
+    max-height: 500px;
+    overflow-y: auto;
 }
 
 .product-images-list__item{
@@ -149,6 +151,14 @@
     border-color: #4267b2;
     background-color: #4267b2;
     color: #fff;
+}
+
+button.circle {
+    border: none;
+    background: #8db0f5;
+    color: rgb(83, 83, 83);
+    cursor: pointer;
+    margin-left: 5px!important;
 }
 
 .circle{
